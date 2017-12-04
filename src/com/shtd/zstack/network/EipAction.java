@@ -54,9 +54,9 @@ public class EipAction {
 	 */
 	public DeleteEipAction.Result deleteEip(String uuid, String sessionId){
 		DeleteEipAction action = new DeleteEipAction();
-		action.uuid = "7ff634c9d79c48ca976a34ce53951c76";
+		action.uuid = uuid;
 		action.deleteMode = "Permissive";
-		action.sessionId = "44b7b711d77b4dfa91257db5b9a61585";
+		action.sessionId = sessionId;
 		DeleteEipAction.Result res = action.call();
 		if (res.error != null) {
 			System.out.println(String.format("deleteEip error code:%s,description:%s,details:%s", res.error.code, res.error.description, res.error.details));
