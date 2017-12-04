@@ -19,7 +19,7 @@ import org.zstack.sdk.UpdateImageAction;
 import com.shtd.zstack.utils.ZStackUtils;
 
 /**
- * 云资源池-镜像相关接口
+ * 3 云资源池-镜像相关接口
  * @author Josh
  * @date 2017-11-29
  */

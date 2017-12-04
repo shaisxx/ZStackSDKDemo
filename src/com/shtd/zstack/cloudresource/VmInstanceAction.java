@@ -32,7 +32,7 @@ import org.zstack.sdk.VmInstanceInventory;
 import com.shtd.zstack.utils.ZStackUtils;
 
 /**
- * 云资源池-云主机相关接口
+ * 3 云资源池-云主机相关接口
  * @author Josh
  * @date 2017-11-28
  */
