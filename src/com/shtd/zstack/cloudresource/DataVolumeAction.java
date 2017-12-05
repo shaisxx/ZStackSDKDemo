@@ -223,7 +223,7 @@ public class DataVolumeAction {
 	public QueryVolumeAction.Result queryVolume(String sessionId){
 		QueryVolumeAction action = new QueryVolumeAction();
 		action.conditions = Arrays.asList();
-		action.sessionId = "a6c77f7c77dd425e98f3089363725c06";
+		action.sessionId = sessionId;
 		QueryVolumeAction.Result res = action.call();
 		if (res.error != null) {
 			System.out.println(String.format("getVolumeFormat error code:%s,description:%s,details:%s", res.error.code, res.error.description, res.error.details));
@@ -273,7 +273,6 @@ public class DataVolumeAction {
 		action.uuid = uuid;
 		action.sessionId = sessionId;
 		GetVolumeCapabilitiesAction.Result res = action.call();
-		
 		if (res.error != null) {
 			System.out.println(String.format("getVolumeCapabilities error code:%s,description:%s,details:%s", res.error.code, res.error.description, res.error.details));
 		} else {
