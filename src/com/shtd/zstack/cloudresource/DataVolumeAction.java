@@ -580,6 +580,19 @@ public class DataVolumeAction {
 	}
 	
 	//3.3.24 创建快照的定时任务
+	/*public void asdf(){
+		CreateVolumeSnapshotSchedulerAction action = new CreateVolumeSnapshotSchedulerAction();
+		action.volumeUuid = "840ffda920fc4cbdb847da88d407ff4a";
+		action.snapShotName = "test-snapshot-scheduler";
+		action.schedulerName = "snapshot-scheduler";
+		action.schedulerDescription = "for test snapshot scheduler";
+		action.type = "simple";
+		action.interval = 5.0;
+		action.repeatCount = 10.0;
+		action.startTime = 0.0;
+		action.sessionUuid = "12eac6c7764c43c98f1e6eeb63ddb207";
+		CreateVolumeSnapshotSchedulerAction.Result res = action.call();
+	}*/
 	
 	/**
 	 * 3.3.25 将云盘回滚至指定快照
