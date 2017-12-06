@@ -215,6 +215,15 @@ public class ImageAction {
 		return res;
 	}
 	
+	// 3.2.9 获取镜像服务器候选
+	/*public void getCandidateBackupStorageForCreatingImage(){
+		GetCandidateBackupStorageForCreatingImageAction action = new GetCandidateBackupStorageForCreatingImageAction();
+		action.volumeUuid = "77e77779b5f94617af0a8b08b4a50129";
+		action.volumeSnapshotUuid = "4a5220b5b1f044f8826520eb506d0f98";
+		action.sessionUuid = "45b0a87571c2476ba2fe6623daaa79cf";
+		GetCandidateBackupStorageForCreatingImageAction.Result res = action.call();
+	}*/
+	
 	/**
 	 * 3.2.10 从根云盘创建根云盘镜像
 	 * @param name
