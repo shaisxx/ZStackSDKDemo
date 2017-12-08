@@ -488,14 +488,14 @@ public class L3NetworkAction {
 		
 		String sessionId = ZStackUtils.ZStackLogin();
 		
-		L3NetworkAction l3Network = new L3NetworkAction();
+		L3NetworkAction action = new L3NetworkAction();
 		
 		// 创建三层网络 Begin
-//		l3NetworkAction.createL3Network("本地三层网络-NEW", "d8f2ba9691e441f8a74040be309e3237", sessionId);
+//		action.createL3Network("本地三层网络-NEW", "d8f2ba9691e441f8a74040be309e3237", sessionId);
 		// 创建三层网络End
 		
 		// 查询三层网络 Begin
-		l3Network.queryL3Network(sessionId);
+		action.queryL3Network(sessionId);
 		// 查询三层网络 End
 		
 	}

@@ -68,11 +68,11 @@ public class NetworkServiceAction {
 		
 		String sessionId = ZStackUtils.ZStackLogin();
 		
-		NetworkServiceAction networkService = new NetworkServiceAction();
+		NetworkServiceAction action = new NetworkServiceAction();
 		
 		// 获取网络服务类型 Begin
 		System.out.println("****** getNetworkServiceTypes Start ******");
-		GetNetworkServiceTypesAction.Result getResult = networkService.getNetworkServiceTypes(sessionId);
+		GetNetworkServiceTypesAction.Result getResult = action.getNetworkServiceTypes(sessionId);
 		if(getResult != null && getResult.value.getTypes() != null && getResult.value.getTypes().size() > 0){
 			for (int i = 0; i < getResult.value.getTypes().size(); i++) {
 				Map<String, Object> map = (Map<String, Object>)getResult.value.getTypes().get(i);

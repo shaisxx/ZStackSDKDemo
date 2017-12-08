@@ -1259,83 +1259,83 @@ public class VmInstanceAction {
 
 		String sessionId = ZStackUtils.ZStackLogin();
 		
-		VmInstanceAction vmInstance = new VmInstanceAction();
+		VmInstanceAction action = new VmInstanceAction();
 
 		// 创建云主机 Begin
-//		vmInstance.createVmInstance(sessionId, "20171128-test", "", "b22c052db07647b9a76cd36e36da1b0e", 
+//		action.createVmInstance(sessionId, "20171128-test", "", "b22c052db07647b9a76cd36e36da1b0e", 
 //				"c843db4378e747a89de43c74e3ae2430", "c11ae3711dd741d2902c87b5a18ba3b7", "9bd019c111da48a091d8bb84003817ed", "测试创建云主机");
 		// 创建云主机 End
 		
 		// 查询云主机 Begin
-		vmInstance.queryVmInstance(ZStackUtils.hosturl, "20171128-test1", sessionId);
+		action.queryVmInstance(ZStackUtils.hosturl, "20171128-test1", sessionId);
 		// 查询云主机 End
 		
 		// 删除云主机 Begin
-		vmInstance.destroyVmInstance("a5061116c07443ff9479e0a8d2a48a03", sessionId);
+		action.destroyVmInstance("a5061116c07443ff9479e0a8d2a48a03", sessionId);
 		// 删除云主机 End
 		
 		// 恢复已删除云主机 Begin
-		vmInstance.recoverVmInstance("21aef9b0685a49de834aa80bef6b8dc4", sessionId);
+		action.recoverVmInstance("21aef9b0685a49de834aa80bef6b8dc4", sessionId);
 		// 恢复已删除云主机 End
 		
 		// 彻底删除云主机 Begin
-		vmInstance.expungeVmInstance("a5061116c07443ff9479e0a8d2a48a03", sessionId);
+		action.expungeVmInstance("a5061116c07443ff9479e0a8d2a48a03", sessionId);
 		// 彻底删除云主机 End
 		
 		// 停止云主机 Begin
-//		vmInstance.stopVmInstance("d92b0c13bb044ca5817cc11be6b605ef", sessionId);
+//		action.stopVmInstance("d92b0c13bb044ca5817cc11be6b605ef", sessionId);
 		// 停止云主机 End
 		
 		// 启动云主机 Begin
-//		vmInstance.startVmInstance("d92b0c13bb044ca5817cc11be6b605ef", sessionId);
+//		action.startVmInstance("d92b0c13bb044ca5817cc11be6b605ef", sessionId);
 		// 启动云主机 End
 		
 		// 重启云主机 Begin
-//		vmInstance.rebootVmInstance("d92b0c13bb044ca5817cc11be6b605ef", sessionId);
+//		action.rebootVmInstance("d92b0c13bb044ca5817cc11be6b605ef", sessionId);
 		// 重启云主机 End
 		
 		// 暂停云主机 Begin
-//		vmInstance.pauseVmInstance("d92b0c13bb044ca5817cc11be6b605ef", sessionId);
+//		action.pauseVmInstance("d92b0c13bb044ca5817cc11be6b605ef", sessionId);
 		// 暂停云主机 End
 		
 		// 恢复暂停的云主机 Begin
-//		vmInstance.resumeVmInstance("d92b0c13bb044ca5817cc11be6b605ef", sessionId);
+//		action.resumeVmInstance("d92b0c13bb044ca5817cc11be6b605ef", sessionId);
 		// 恢复暂停的云主机 End
 		
 		// 重置云主机 Begin
-//		vmInstance.reimageVmInstance("d92b0c13bb044ca5817cc11be6b605ef", sessionId);
+//		action.reimageVmInstance("d92b0c13bb044ca5817cc11be6b605ef", sessionId);
 		// 重置云主机 End
 		
 		//  获取可热迁移的物理机列表 Begin
-		vmInstance.getVmMigrationCandidateHosts("d92b0c13bb044ca5817cc11be6b605ef", sessionId);
+		action.getVmMigrationCandidateHosts("d92b0c13bb044ca5817cc11be6b605ef", sessionId);
 		//  获取可热迁移的物理机列表 End
 		
 		//   获取相互依赖的镜像和L3网络 Begin
-		vmInstance.getInterdependentL3NetworksImages("2429832713f74b339d3abf01e126bf23", "d92b0c13bb044ca5817cc11be6b605ef", sessionId);
+		action.getInterdependentL3NetworksImages("2429832713f74b339d3abf01e126bf23", "d92b0c13bb044ca5817cc11be6b605ef", sessionId);
 		//   获取相互依赖的镜像和L3网络 End
 		
 		//  设置云主机控制台密码 Begin
-//		vmInstance.setVmConsolePassword("d92b0c13bb044ca5817cc11be6b605ef", "123456", sessionId);
+//		action.setVmConsolePassword("d92b0c13bb044ca5817cc11be6b605ef", "123456", sessionId);
 		//  设置云主机控制台密码 End
 		
 		//  获取云主机控制台密码 Begin
-		vmInstance.getVmConsolePassword("d92b0c13bb044ca5817cc11be6b605ef", sessionId);
+		action.getVmConsolePassword("d92b0c13bb044ca5817cc11be6b605ef", sessionId);
 		//  获取云主机控制台密码 End
 		
 		// 设置云主机hostname Begin
-//		vmInstance.setVmHostname("21aef9b0685a49de834aa80bef6b8dc4", "vm.host.org", sessionId);
+//		action.setVmHostname("21aef9b0685a49de834aa80bef6b8dc4", "vm.host.org", sessionId);
 		// 设置云主机hostname End
 		
 		// 获取云主机能力 Begin
-//		vmInstance.getVmCapabilities("21aef9b0685a49de834aa80bef6b8dc4", sessionId);
+//		action.getVmCapabilities("21aef9b0685a49de834aa80bef6b8dc4", sessionId);
 		// 获取云主机能力 End
 		
 		// 克隆云主机到指定物理机上 Begin
-//		vmInstance.cloneVmInstance("21aef9b0685a49de834aa80bef6b8dc4", sessionId);
+//		action.cloneVmInstance("21aef9b0685a49de834aa80bef6b8dc4", sessionId);
 		// 克隆云主机到指定物理机上 End
 		
 		// 获取云主机Qga Begin
-		vmInstance.getVmQga("21aef9b0685a49de834aa80bef6b8dc4", sessionId);
+		action.getVmQga("21aef9b0685a49de834aa80bef6b8dc4", sessionId);
 		// 获取云主机Qga End 
 	}
 }

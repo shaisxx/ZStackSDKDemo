@@ -618,11 +618,19 @@ public class DataVolumeAction {
 
 		String sessionId = ZStackUtils.ZStackLogin();
 		
-		DataVolumeAction dataVolume = new DataVolumeAction();
+		DataVolumeAction action = new DataVolumeAction();
 		
 		// 创建云盘 Begin
-		dataVolume.createDataVolume("test-volume", "test-volume desc", 
+		action.createDataVolume("test-volume", "test-volume desc", 
 				"415291baa51441668f4e96678a442d4b", "60ecca89521b43529156e195c65ed941", "70f867db4c3a46c5b98eb61122d8603a", sessionId);
 		// 创建云盘 End
+		
+		// 删除云盘 Begin
+		action.deleteDataVolume("uuid", sessionId);
+		// 删除云盘 End
+		
+		// 彻底删除云盘 Begin
+		action.expungeDataVolume("uuid", sessionId);
+		// 彻底删除云盘 End
 	}
 }

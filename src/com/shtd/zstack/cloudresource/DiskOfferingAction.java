@@ -136,26 +136,26 @@ public class DiskOfferingAction {
 
 		String sessionId = ZStackUtils.ZStackLogin();
 		
-		DiskOfferingAction diskOffering = new DiskOfferingAction();
+		DiskOfferingAction action = new DiskOfferingAction();
 		
 		// 创建云盘规格 Begin
-		diskOffering.createDiskOffering("diskOffering1", Long.valueOf("100.0"), 0, sessionId);
+		action.createDiskOffering("diskOffering1", Long.valueOf("100.0"), 0, sessionId);
 		// 创建云盘规格 End
 		
 		// 查询云盘规格 Begin
-		diskOffering.queryDiskOffering("uuid", sessionId);
+		action.queryDiskOffering("uuid", sessionId);
 		// 查询云盘规格 End
 		
 		// 更改云盘规格的启用状态 Begin
-		diskOffering.changeDiskOfferingState("uuid", "enable", sessionId);
+		action.changeDiskOfferingState("uuid", "enable", sessionId);
 		// 更改云盘规格的启用状态 End
 		
 		// 更新云盘规格 Begin
-		diskOffering.updateDiskOffering("uuid", "newdiskOffering1", sessionId);
+		action.updateDiskOffering("uuid", "newdiskOffering1", sessionId);
 		// 更新云盘规格 End
 		
 		// 删除云盘规格 Begin
-		diskOffering.deleteDiskOffering("uuid", sessionId);
+		action.deleteDiskOffering("uuid", sessionId);
 		// 删除云盘规格 End
 	}
 }

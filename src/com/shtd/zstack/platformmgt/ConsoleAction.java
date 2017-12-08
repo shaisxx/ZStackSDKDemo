@@ -93,10 +93,10 @@ public class ConsoleAction {
 
 		String sessionId = ZStackUtils.ZStackLogin();
 		
-		ConsoleAction console = new ConsoleAction();
+		ConsoleAction action = new ConsoleAction();
 		
 		// 请求控制台访问地址 Begin
-		console.requestConsoleAccess("e003a205042f49fc96349b6da42b5efa", sessionId);
+		action.requestConsoleAccess("e003a205042f49fc96349b6da42b5efa", sessionId);
 		// 请求控制台访问地址 End
 	}
 }

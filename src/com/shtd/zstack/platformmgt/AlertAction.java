@@ -29,6 +29,8 @@ import org.zstack.sdk.QueryMonitorTriggerActionAction;
 import org.zstack.sdk.UpdateEmailMediaAction;
 import org.zstack.sdk.UpdateMonitorTriggerAction;
 
+import com.shtd.zstack.utils.ZStackUtils;
+
 /**
  * 7 平台管理-监控报警相关接口-智能报警相关接口
  * @author Josh
@@ -536,5 +538,12 @@ public class AlertAction {
 	
 	public static void main(String[] args) {
 
+		String sessionId = ZStackUtils.ZStackLogin();
+		
+		AlertAction action = new AlertAction();
+
+		// 删除媒体 Begin
+		action.deleteMedia("uuid", sessionId);
+		// 删除媒体 End
 	}
 }

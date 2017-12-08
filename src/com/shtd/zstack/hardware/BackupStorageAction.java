@@ -274,11 +274,11 @@ public class BackupStorageAction {
 
 		String sessionId = ZStackUtils.ZStackLogin();
 		
-		BackupStorageAction backupStorage = new BackupStorageAction();
+		BackupStorageAction action = new BackupStorageAction();
 		
-		// 查询物理机 Begin
-		backupStorage.queryBackupStorage("004a15e5210e46de85d02a34da626e83", sessionId);
-		// 查询区域 End
+		// 查询镜像服务器 Begin
+		action.queryBackupStorage("uuid", sessionId);
+		// 查询镜像服务器 End
 		
 	}
 }

@@ -902,26 +902,26 @@ public class UserOrAccountAction {
 
 		String sessionId = ZStackUtils.ZStackLogin();
 		
-		UserOrAccountAction account = new UserOrAccountAction();
+		UserOrAccountAction action = new UserOrAccountAction();
 		
 		// 创建账户 Begin
-		account.createAccount("lanyan", "lanyan", sessionId);
+		action.createAccount("lanyan", "lanyan", sessionId);
 		// 创建账户 End
 		
 		// 查询账户 Begin
-		account.queryAccount("lanyan", sessionId);
+		action.queryAccount("lanyan", sessionId);
 		// 查询账户 End
 		
 		// 更新账户 Begin
-		account.updateAccount("2e6678faccfe4b9d9c581056cbddbedb", "newlanyan", "123456", sessionId);
+		action.updateAccount("2e6678faccfe4b9d9c581056cbddbedb", "newlanyan", "123456", sessionId);
 		// 更新账户 End
 		
 		// 删除账户 Begin
-		account.deleteAccount("7aad297328ac4b94b2465d20190b939e", sessionId);
+		action.deleteAccount("7aad297328ac4b94b2465d20190b939e", sessionId);
 		// 删除账户 End
 		
 		// 创建用户 Begin
-		account.createUser("lanyan009", "lanyan009", sessionId);
+		action.createUser("lanyan009", "lanyan009", sessionId);
 		// 创建用户 End
 	}
 }

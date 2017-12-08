@@ -163,11 +163,15 @@ public class VCenterAction {
 
 		String sessionId = ZStackUtils.ZStackLogin();
 		
-		VCenterAction vCenter = new VCenterAction();
+		VCenterAction action = new VCenterAction();
 		
 		// 查询vCenter资源 Begin
-		vCenter.queryVCenter("ca7c23f51fca4be793340a6134d5c5a0", sessionId);
+		action.queryVCenter("ca7c23f51fca4be793340a6134d5c5a0", sessionId);
 		// 查询vCenter资源 End
+		
+		//  删除vCenter资源 Begin
+		action.deleteVCenter("ca7c23f51fca4be793340a6134d5c5a0", sessionId);
+		//  删除vCenter资源 End
 		
 	}
 }

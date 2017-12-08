@@ -389,15 +389,15 @@ public class L2VlanNetworkAction {
 
 		String sessionId = ZStackUtils.ZStackLogin();
 		
-		L2VlanNetworkAction l2NoVlanNetwork = new L2VlanNetworkAction();
+		L2VlanNetworkAction action = new L2VlanNetworkAction();
 		
 		// 创建二层网络 Begin
-		l2NoVlanNetwork.createL2NoVlanNetwork("本地二层网络-NEW", "本地二层网络-NEW DESC", 
+		action.createL2NoVlanNetwork("本地二层网络-NEW", "本地二层网络-NEW DESC", 
 				"2429832713f74b339d3abf01e126bf23", "eth0", sessionId);
 		// 创建二层网络End
 		
 		// 查询区域 Begin
-		l2NoVlanNetwork.queryL2Network(sessionId);
+		action.queryL2Network(sessionId);
 		// 查询区域 End
 	}
 }

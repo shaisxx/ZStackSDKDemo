@@ -2,7 +2,6 @@ package com.shtd.zstack.test;
 
 import java.util.Arrays;
 
-import org.apache.commons.lang3.StringUtils;
 import org.zstack.sdk.CloneVmInstanceAction;
 import org.zstack.sdk.CreateVmInstanceAction;
 import org.zstack.sdk.CreateWebhookAction;
@@ -24,6 +23,7 @@ public class ZStackSDKTest {
 
 	private String mSessionID;
 
+	@SuppressWarnings("unused")
 	private String ZStackLogin(String hosturl, String username, String passwd) {
 		// 声明sessionId；每个action均需要sessionId
 		String sessionId;
@@ -46,6 +46,7 @@ public class ZStackSDKTest {
 		return sessionId;
 	}
 
+	@SuppressWarnings("unused")
 	public void createwebhook() {
 		CreateWebhookAction cwaction = new CreateWebhookAction();
 		cwaction.sessionId = this.mSessionID;
@@ -124,6 +125,7 @@ public class ZStackSDKTest {
 		return vmuuid;
 	}
 
+	@SuppressWarnings("unused")
 	public void CloneVm(String fromvmid) {
 
 		CloneVmInstanceAction action = new CloneVmInstanceAction();
@@ -155,6 +157,7 @@ public class ZStackSDKTest {
 		return res;
 	}
 
+	@SuppressWarnings("unused")
 	public String getVersion() {
 		GetVersionAction action = new GetVersionAction();
 		GetVersionAction.Result res = action.call();

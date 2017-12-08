@@ -191,22 +191,22 @@ public class ClusterAction {
 		
 		String sessionId = ZStackUtils.ZStackLogin();
 		
-		ClusterAction cluster = new ClusterAction();
+		ClusterAction action = new ClusterAction();
 		
 		// 创建集群 Begin
-//		cluster.createCluster("dbe3997285a64f4d9f5cc39cf8367f54", "ClusterTest", "ClusterTest Desc", sessionId);
+//		action.createCluster("dbe3997285a64f4d9f5cc39cf8367f54", "ClusterTest", "ClusterTest Desc", sessionId);
 		// 创建集群 End
 		
 		// 查询集群 Begin
-		cluster.queryCluster("KVM", sessionId);
+		action.queryCluster("KVM", sessionId);
 		// 查询集群 End
 		
 		// 更新集群信息 Begin
-		cluster.updateCluster("2c645f1fe34c402bb51068eeae4cd6c4", "ClusterTestNew", "ClusterTestNew Desc", sessionId);
+		action.updateCluster("2c645f1fe34c402bb51068eeae4cd6c4", "ClusterTestNew", "ClusterTestNew Desc", sessionId);
 		// 更新集群信息 End
 		
 		// 删除集群 Begin
-		cluster.deleteCluster("e9be59c37f904a95ba4f7ede1dad661b", sessionId);
+		action.deleteCluster("e9be59c37f904a95ba4f7ede1dad661b", sessionId);
 		// 删除集群 End
 		
 	}

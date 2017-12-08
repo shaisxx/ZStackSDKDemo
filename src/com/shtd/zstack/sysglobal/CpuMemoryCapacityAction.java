@@ -44,10 +44,10 @@ public class CpuMemoryCapacityAction {
 		
 		String sessionId = ZStackUtils.ZStackLogin();
 		
-		CpuMemoryCapacityAction cpuMemoryCapacity = new CpuMemoryCapacityAction();
+		CpuMemoryCapacityAction action = new CpuMemoryCapacityAction();
 		
 		//  获取cpu和内存容量 Begin
-		cpuMemoryCapacity.getCpuMemoryCapacity("e003a205042f49fc96349b6da42b5efa", "e003a205042f49fc96349b6da42b5efa", "e003a205042f49fc96349b6da42b5efa", sessionId);
+		action.getCpuMemoryCapacity("e003a205042f49fc96349b6da42b5efa", "e003a205042f49fc96349b6da42b5efa", "e003a205042f49fc96349b6da42b5efa", sessionId);
 		//  获取cpu和内存容量  End
 		
 	}

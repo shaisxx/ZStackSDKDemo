@@ -114,10 +114,10 @@ public class IPsecConnectionAction {
 		
 		String sessionId = ZStackUtils.ZStackLogin();
 		
-		IPsecConnectionAction iPsecConnection = new IPsecConnectionAction();
+		IPsecConnectionAction action = new IPsecConnectionAction();
 		
 		//  删除IPsec连接 Begin
-		iPsecConnection.deleteIPsecConnection("2429832713f74b339d3abf01e126bf23", sessionId);
+		action.deleteIPsecConnection("2429832713f74b339d3abf01e126bf23", sessionId);
 		//  删除IPsec连接 End
 		
 	}

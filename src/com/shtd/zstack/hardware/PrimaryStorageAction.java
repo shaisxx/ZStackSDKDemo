@@ -296,16 +296,16 @@ public class PrimaryStorageAction {
 
 		String sessionId = ZStackUtils.ZStackLogin();
 		
-		PrimaryStorageAction primaryStorage = new PrimaryStorageAction();
+		PrimaryStorageAction action = new PrimaryStorageAction();
 		
 		// 查询主存储 Begin
-		primaryStorage.queryPrimaryStorage("60ecca89521b43529156e195c65ed941", sessionId);
+		action.queryPrimaryStorage("60ecca89521b43529156e195c65ed941", sessionId);
 		// 查询主存储End
 		
 		// 向集群添加主存储 Begin
 //		System.out.println("****** attachPrimaryStorageToCluster Start ******");
 //		AttachPrimaryStorageToClusterAction.Result attachPrimaryStorageToClusterResult = 
-//				primaryStorage.attachPrimaryStorageToCluster("2c645f1fe34c402bb51068eeae4cd6c4", 
+//				action.attachPrimaryStorageToCluster("2c645f1fe34c402bb51068eeae4cd6c4", 
 //						"60ecca89521b43529156e195c65ed941", sessionId);
 //		System.out.println("****** attachPrimaryStorageToCluster result : " + attachPrimaryStorageToClusterResult.value.getInventory().getName());
 //		System.out.println("****** attachPrimaryStorageToCluster Stop ******");

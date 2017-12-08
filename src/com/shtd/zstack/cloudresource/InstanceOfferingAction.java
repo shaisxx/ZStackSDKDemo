@@ -169,30 +169,30 @@ public class InstanceOfferingAction {
 
 		String sessionId = ZStackUtils.ZStackLogin();
 		
-		InstanceOfferingAction instanceOffering = new InstanceOfferingAction();
+		InstanceOfferingAction action = new InstanceOfferingAction();
 		
 		// 创建云主机规格 Begin
-		instanceOffering.createInstanceOffering("instanceOffering", 2, Long.valueOf("2052.0"), 0, "UserVm", sessionId);
+		action.createInstanceOffering("instanceOffering", 2, Long.valueOf("2052.0"), 0, "UserVm", sessionId);
 		// 创建云主机规格 End
 		
 		// 查询云主机规格 Begin
-		instanceOffering.queryInstanceOffering("uuid", sessionId);
+		action.queryInstanceOffering("uuid", sessionId);
 		// 查询云主机规格 End
 		
 		// 更改云主机规格 Begin
-		instanceOffering.changeInstanceOffering("vmInstanceUuid", "instanceOfferingUuid", sessionId);
+		action.changeInstanceOffering("vmInstanceUuid", "instanceOfferingUuid", sessionId);
 		// 更改云主机规格 End
 		
 		// 更新云主机规格 Begin
-		instanceOffering.updateInstanceOffering("uuid", "newName", sessionId);
+		action.updateInstanceOffering("uuid", "newName", sessionId);
 		// 更新云主机规格 End
 		
 		// 更改云主机规格的启用状态 Begin
-		instanceOffering.changeInstanceOfferingState("uuid", "enable", sessionId);
+		action.changeInstanceOfferingState("uuid", "enable", sessionId);
 		// 更改云主机规格的启用状态 End
 		
 		// 删除云主机规格 Begin
-		instanceOffering.deleteInstanceOffering("uuid", sessionId);
+		action.deleteInstanceOffering("uuid", sessionId);
 		// 删除云主机规格 End
 	}
 }

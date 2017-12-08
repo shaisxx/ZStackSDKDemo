@@ -113,22 +113,22 @@ public class ZoneAction {
 
 		String sessionId = ZStackUtils.ZStackLogin();
 		
-		ZoneAction zone = new ZoneAction();
+		ZoneAction action = new ZoneAction();
 		
 		// 创建区域 Begin
-//		zone.createZone("lanyanZone1130", "lanyan-test", sessionId);
+//		action.createZone("lanyanZone1130", "lanyan-test", sessionId);
 		// 创建区域 End
 		
 		// 查询区域 Begin
-		zone.queryZone("lanyanZone1130", sessionId);
+		action.queryZone("lanyanZone1130", sessionId);
 		// 查询区域 End
 		
 		// 更新区域信息 Begin
-		zone.updateZone("lanyanZonenew", "lanyanZonenew desc", "35cdfb95ca9745f58a37584c488c8ccb", sessionId);
+		action.updateZone("lanyanZonenew", "lanyanZonenew desc", "35cdfb95ca9745f58a37584c488c8ccb", sessionId);
 		// 更新区域信息 End
 		
 		// 删除区域 Begin
-		zone.deleteZone("3edd1501678640f1abdaa609a3bf518c", sessionId);
+		action.deleteZone("3edd1501678640f1abdaa609a3bf518c", sessionId);
 		// 删除区域 End
 	}
 }

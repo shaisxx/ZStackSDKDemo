@@ -185,10 +185,10 @@ public class VirtualRouterVmAction {
 
 		String sessionId = ZStackUtils.ZStackLogin();
 		
-		VirtualRouterVmAction virtualRouterVmAction = new VirtualRouterVmAction();
+		VirtualRouterVmAction action = new VirtualRouterVmAction();
 		
 		// 查询云路由 Begin
-		virtualRouterVmAction.queryVirtualRouterVm("", sessionId);
+		action.queryVirtualRouterVm("", sessionId);
 		// 查询云路由 End
 	}
 }

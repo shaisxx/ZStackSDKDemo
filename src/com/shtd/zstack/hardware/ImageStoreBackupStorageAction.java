@@ -143,9 +143,10 @@ public class ImageStoreBackupStorageAction {
 
 		String sessionId = ZStackUtils.ZStackLogin();
 		
-		ImageStoreBackupStorageAction imageStoreBackupStorage = new ImageStoreBackupStorageAction();
+		ImageStoreBackupStorageAction action = new ImageStoreBackupStorageAction();
+		
 		// 查询镜像仓库服务器 Begin
-		imageStoreBackupStorage.queryImageStoreBackupStorage("uuid", sessionId);
+		action.queryImageStoreBackupStorage("uuid", sessionId);
 		// 查询镜像仓库服务器 End
 	}
 }

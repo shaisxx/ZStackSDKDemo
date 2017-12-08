@@ -260,14 +260,14 @@ public class HostAction {
 
 		String sessionId = ZStackUtils.ZStackLogin();
 		
-		HostAction host = new HostAction();
+		HostAction action = new HostAction();
 		
 		// 查询物理机 Begin
-		host.queryHost("70f867db4c3a46c5b98eb61122d8603a", sessionId);
+		action.queryHost("70f867db4c3a46c5b98eb61122d8603a", sessionId);
 		// 查询区域 End
 		
 		// 更新物理机信息 Begin
-		host.updateHost("70f867db4c3a46c5b98eb61122d8603a", "Host-1", "Host-1-New Desc", sessionId);
+		action.updateHost("70f867db4c3a46c5b98eb61122d8603a", "Host-1", "Host-1-New Desc", sessionId);
 		// 更新物理机信息 End
 	}
 }

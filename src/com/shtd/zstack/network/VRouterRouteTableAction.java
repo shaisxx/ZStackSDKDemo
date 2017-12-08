@@ -261,10 +261,10 @@ public class VRouterRouteTableAction {
 
 		String sessionId = ZStackUtils.ZStackLogin();
 		
-		VRouterRouteTableAction vRouterRouteTable = new VRouterRouteTableAction();
+		VRouterRouteTableAction action = new VRouterRouteTableAction();
 		
 		// 创建云路由路由表 Begin
-		vRouterRouteTable.createVRouterRouteTable("VRouterRouteTableName", "VRouterRouteTableName Desc", sessionId);
+		action.createVRouterRouteTable("VRouterRouteTableName", "VRouterRouteTableName Desc", sessionId);
 		// 创建云路由路由表 End
 	}
 }

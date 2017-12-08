@@ -10,6 +10,8 @@ import org.zstack.sdk.StartBaremetalPxeServerAction;
 import org.zstack.sdk.StopBaremetalPxeServerAction;
 import org.zstack.sdk.UpdateBaremetalPxeServerAction;
 
+import com.shtd.zstack.utils.ZStackUtils;
+
 /**
  * 4 硬件设施-裸机管理相关接口-安装服务相关接口
  * @author Josh
@@ -159,5 +161,13 @@ public class BaremetalPxeServerAction {
 	
 	public static void main(String[] args) {
 
+		String sessionId = ZStackUtils.ZStackLogin();
+		
+		BaremetalPxeServerAction action = new BaremetalPxeServerAction();
+		
+		// 删除PXE服务 Begin
+		action.deleteBaremetalPxeServer("uuid", sessionId);
+		// 删除PXE服务 End
+		
 	}
 }

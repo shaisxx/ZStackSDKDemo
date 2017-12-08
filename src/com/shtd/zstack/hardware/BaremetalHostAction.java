@@ -21,6 +21,8 @@ import org.zstack.sdk.QueryBaremetalHostCfgAction;
 import org.zstack.sdk.RequestBaremetalConsoleAccessAction;
 import org.zstack.sdk.UpdateBaremetalChassisAction;
 
+import com.shtd.zstack.utils.ZStackUtils;
+
 /**
  * 4 硬件设施-裸机管理相关接口-裸机安装相关接口
  * @author Josh
@@ -350,6 +352,13 @@ public class BaremetalHostAction {
 	}
 	
 	public static void main(String[] args) {
-
+		
+		String sessionId = ZStackUtils.ZStackLogin();
+		
+		BaremetalHostAction action = new BaremetalHostAction();
+		
+		// 查询裸机硬件配置 Begin
+		action.queryBaremetalHardwareInfo("uuid", sessionId);
+		// 查询裸机硬件配置 End
 	}
 }

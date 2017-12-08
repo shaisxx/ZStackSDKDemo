@@ -312,23 +312,23 @@ public class ImageAction {
 		
 		String sessionId = ZStackUtils.ZStackLogin();
 		
-		ImageAction image = new ImageAction();
+		ImageAction action = new ImageAction();
 		
 		// 创建镜像 Begin
-//		image.addImage("centos6-test1", "file:///opt/centos6.8-mini.qcow2", "qcow2", "Linux", 
-//				Arrays.asList("004a15e5210e46de85d02a34da626e83"), sessionId);
+		action.addImage("centos6-test1", "file:///opt/centos6.8-mini.qcow2", "qcow2", "Linux", 
+				Arrays.asList("004a15e5210e46de85d02a34da626e83"), sessionId);
 		// 创建镜像 End
 		
 		// 查询镜像 Begin
-		image.queryImage("8f059b20bf4b4a64aef34cf7e6cc36bb", sessionId);
+		action.queryImage("8f059b20bf4b4a64aef34cf7e6cc36bb", sessionId);
 		// 查询镜像 End
 		
 		// 更新镜像信息 Begin
-		image.updateImage("8f059b20bf4b4a64aef34cf7e6cc36bb", "Windows", sessionId);
+		action.updateImage("8f059b20bf4b4a64aef34cf7e6cc36bb", "Windows", sessionId);
 		// 更新镜像信息 End
 		
 		// 删除镜像 Begin
-		image.deleteImage("b66478c2ccbb4c5488ac958c9c920c85", Arrays.asList("004a15e5210e46de85d02a34da626e83"), sessionId);
+		action.deleteImage("b66478c2ccbb4c5488ac958c9c920c85", Arrays.asList("004a15e5210e46de85d02a34da626e83"), sessionId);
 		// 删除镜像 End
 	}
 }
